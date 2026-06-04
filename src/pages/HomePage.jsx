@@ -69,8 +69,8 @@ export default function HomePage() {
       <section className="home-hero" aria-labelledby="hero-heading">
         <div className="home-hero__image-wrap">
           <img
-            src="/light-hero.jpg"
-            alt="AYA Restaurant exterior in Mayfair, London"
+            src="/aya-logo-bg.jpg"
+            alt="AYA Restaurant logo"
             className="home-hero__image"
             fetchpriority="high"
           />
