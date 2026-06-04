@@ -35,8 +35,8 @@
 .home-hero__content {
   position: relative;
   z-index: 1;
-  max-width: 50%; /* Push to the left half */
-  padding-right: var(--space-8);
+  width: 100%;
+  padding-right: 50%; /* Force text into the left half of the page-wrapper */
 }
 
 .home-hero__label {
