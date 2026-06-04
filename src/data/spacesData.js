@@ -1,0 +1,50 @@
+export const SPACES = [
+  {
+    id: 'sp1',
+    title: 'The Main Room',
+    subtitle: 'Seats 60 guests',
+    image: '/main-dining.jpg',
+    alt: 'AYA main dining room with natural light and linen tables',
+    span: 'wide', // css grid span hint
+  },
+  {
+    id: 'sp2',
+    title: 'The Pool Terrace',
+    subtitle: 'Open May – September',
+    image: '/pool-terrace.jpg',
+    alt: 'Outdoor terrace dining adjacent to the pool',
+    span: 'tall',
+  },
+  {
+    id: 'sp3',
+    title: 'The Private Room',
+    subtitle: 'Exclusively for 8–20 guests',
+    image: '/private-dining.jpg',
+    alt: 'Private dining room with oval table and sash windows',
+    span: 'normal',
+  },
+  {
+    id: 'sp4',
+    title: 'The Bar & Lounge',
+    subtitle: 'Walk-ins welcome until 23:00',
+    image: '/bar-bright.jpg',
+    alt: 'Marble bar with backlit spirits shelving',
+    span: 'normal',
+  },
+  {
+    id: 'sp5',
+    title: 'The Kitchen Counter',
+    subtitle: '6 seats, chef\'s experience',
+    image: '/dish-hero.jpg',
+    alt: 'Counter dining with view into the open kitchen',
+    span: 'normal',
+  },
+  {
+    id: 'sp6',
+    title: 'The Exterior',
+    subtitle: '12 Bruton Place, Mayfair',
+    image: '/light-hero.jpg',
+    alt: 'AYA restaurant exterior entrance in Mayfair',
+    span: 'normal',
+  },
+];
