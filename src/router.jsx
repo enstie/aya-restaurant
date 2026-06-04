@@ -30,13 +30,9 @@ const router = createBrowserRouter([
     element: <LoginPage />,
   },
   {
-    // /walk-in is the staff POS kiosk — guarded by ProtectedRoute
+    // /walk-in is the public Table Order page
     path: '/walk-in',
-    element: (
-      <ProtectedRoute>
-        <WalkInPage />
-      </ProtectedRoute>
-    ),
+    element: <WalkInPage />,
   },
   {
     // /KitchenDisplay/aya is staff-only — heavily guarded by ProtectedRoute
