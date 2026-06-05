@@ -283,7 +283,8 @@
 
 @media (max-width: 480px) {
   .home-stats__grid { grid-template-columns: 1fr 1fr; }
-  .home-hero__actions { flex-direction: column; }
+  .home-hero__actions { flex-direction: column; width: 100%; }
+  .home-hero__actions .btn { justify-content: center; width: 100%; }
   .home-cta__actions { flex-direction: column; width: 100%; }
-  .home-cta__actions .btn { justify-content: center; }
+  .home-cta__actions .btn { justify-content: center; width: 100%; }
 }
