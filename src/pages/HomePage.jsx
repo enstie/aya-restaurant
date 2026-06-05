@@ -1,4 +1,8 @@
 import { Link } from 'react-router-dom';
+import { Suspense } from 'react';
+import { Canvas } from '@react-three/fiber';
+import { Environment } from '@react-three/drei';
+import SushiModel from '../components/SushiModel';
 import SEO from '../components/SEO';
 import './HomePage.css';
 
@@ -76,6 +80,19 @@ export default function HomePage() {
           />
           <div className="home-hero__image-overlay" aria-hidden="true" />
         </div>
+
+        {/* ── 3D CANVAS ON RIGHT ── */}
+        <div className="home-hero__3d-wrap">
+          <Canvas camera={{ position: [0, 0, 5], fov: 45 }}>
+            <Suspense fallback={null}>
+              <ambientLight intensity={0.5} />
+              <directionalLight position={[10, 10, 5]} intensity={1} />
+              <Environment preset="city" />
+              <SushiModel scale={1.5} position={[0, -0.5, 0]} />
+            </Suspense>
+          </Canvas>
+        </div>
+
         <div className="home-hero__content page-wrapper">
           <span className="section-label home-hero__label">Mayfair, London · Est. 2022</span>
           <h1 id="hero-heading" className="home-hero__title">

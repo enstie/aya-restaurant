@@ -39,6 +39,16 @@
   padding-right: 50%; /* Force text into the left half of the page-wrapper */
 }
 
+.home-hero__3d-wrap {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 50%;
+  z-index: 2;
+  pointer-events: none; /* Let clicks pass through if needed, though Canvas has orbit controls sometimes */
+}
+
 .home-hero__label {
   display: block;
   margin-bottom: var(--space-5);
