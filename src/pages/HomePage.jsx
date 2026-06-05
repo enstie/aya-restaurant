@@ -104,8 +104,8 @@ export default function HomePage() {
             evening in the heart of Mayfair.
           </p>
           <div className="home-hero__actions">
-            <Link to="/reservations" className="btn btn-lg btn-primary">
-              Reserve a Table
+            <Link to="/walk-in" className="btn btn-lg btn-primary">
+              Walk-In Order
             </Link>
             <Link to="/menu" className="btn btn-lg btn-outline">
               View the Menu
