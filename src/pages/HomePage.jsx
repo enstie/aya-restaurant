@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom';
-import { Suspense } from 'react';
-import { Canvas } from '@react-three/fiber';
-import { Environment } from '@react-three/drei';
-import SushiModel from '../components/SushiModel';
+import { Suspense, lazy } from 'react';
 import SEO from '../components/SEO';
 import './HomePage.css';
+
+// Dynamically import the heavy 3D engine so it doesn't block initial page load
+const Hero3DScene = lazy(() => import('../components/Hero3DScene'));
 
 const STATS = [
   { value: '★★',    label: 'Michelin Stars' },
@@ -81,16 +81,11 @@ export default function HomePage() {
           <div className="home-hero__image-overlay" aria-hidden="true" />
         </div>
 
-        {/* ── 3D CANVAS ON RIGHT ── */}
+        {/* ── 3D CANVAS ON RIGHT (LAZY LOADED) ── */}
         <div className="home-hero__3d-wrap">
-          <Canvas camera={{ position: [0, 0, 5], fov: 45 }}>
-            <Suspense fallback={null}>
-              <ambientLight intensity={0.5} />
-              <directionalLight position={[10, 10, 5]} intensity={1} />
-              <Environment preset="city" />
-              <SushiModel scale={15} position={[0, -1.0, 0]} />
-            </Suspense>
-          </Canvas>
+          <Suspense fallback={null}>
+            <Hero3DScene />
+          </Suspense>
         </div>
 
         <div className="home-hero__content page-wrapper">
