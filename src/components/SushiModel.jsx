@@ -3,7 +3,7 @@ import { useFrame } from '@react-three/fiber';
 import { useGLTF, Float } from '@react-three/drei';
 
 export default function SushiModel(props) {
-  const { scene } = useGLTF('/sushi.glb');
+  const { scene } = useGLTF('/sushi-compressed.glb');
   const groupRef = useRef();
 
   // Spin the model slowly on the Y axis every frame
@@ -29,4 +29,4 @@ export default function SushiModel(props) {
 }
 
 // Preload the model so it loads instantly when the component mounts
-useGLTF.preload('/sushi.glb');
+useGLTF.preload('/sushi-compressed.glb');
